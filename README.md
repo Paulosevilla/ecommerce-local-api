@@ -26,3 +26,14 @@ pytest -q
 
 ## Licencia
 MIT
+
+## Tecnologías
+- Python 3.11
+- FastAPI
+- Pydantic
+- Uvicorn
+- PyTest
+- Flake8
+
+## Licencia
+MIT
