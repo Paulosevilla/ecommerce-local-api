@@ -25,10 +25,12 @@ jobs:
         pip install fastapi uvicorn pytest flake8 pydantic[email]
         pip install -r requirements.txt || echo "No requirements file found"
 
-    - name: Lint (force pass)
+    - name: Lint (flake8 con config del repo)
+      continue-on-error: true
       run: |
-        echo "🔎 Running Flake8..."
-        flake8 --config=.flake8 . || true
+        pip install flake8
+        flake8 --config=.flake8 .
+
 
     - name: Run tests (force pass)
       run: |
